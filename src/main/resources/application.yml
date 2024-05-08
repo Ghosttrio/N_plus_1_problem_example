@@ -6,9 +6,9 @@ spring:
     password: root
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create
     properties:
       hibernate:
         show_sql: true
         format_sql: false
-        default_batch_fetch_size: 10
+#        default_batch_fetch_size: 10

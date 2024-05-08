@@ -26,15 +26,27 @@ public class Team {
     @Column(name = "team_name")
     private String name;
 
+
+    /**
+     * 기본 연관관계
+     */
 //    @Fetch(FetchMode.SUBSELECT)
 //    @OneToMany(mappedBy = "team", fetch = FetchType.EAGER)
 //    @BatchSize(size=10)
-    @OneToMany(mappedBy = "team", fetch = FetchType.LAZY)
-    private List<Member> members = new ArrayList<>();
+//    @OneToMany(mappedBy = "team", fetch = FetchType.LAZY)
+//    private List<Member> members = new ArrayList<>();
+//
+//    @Builder
+//    public Team(String name) {
+//        this.name = name;
+//    }
 
-
+    /**
+     * 도메인 로직
+     */
     @Builder
     public Team(String name) {
         this.name = name;
     }
+
 }
